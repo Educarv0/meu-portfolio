@@ -1,6 +1,41 @@
-header {
-    padding: 30px 0;
-    height: 40px;
-    margin: 80px;
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+header{
+    padding: 40px 4%;
+}
+.logo{
+    max-width: 1280px;
+    padding: 0 auto;
+}
+/* barra de navegação*/
+header > .interface{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+}
+header a{
+    color: #ffff;
+}
+header a:hover{
+    cursor: pointer;
+    text-decoration: #ffff ;
+    transition: 0.9s;
+}
+ul{
+    list-style: none;
+}
+header nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+    color: white;
 }
