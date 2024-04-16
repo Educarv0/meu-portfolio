@@ -1,17 +1,29 @@
+
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
 body{
-    background-color: black;
+    background-image: linear-gradient(rgb(44, 9, 241), blue, rgb(48, 31, 202));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
 }
 header{
-    padding: 40px 4%;
+    padding: 0px 4%;
 }
+
+
 .logo{
-    max-width: 1280px;
-    padding: 0 auto;
+    max-width: 200px;
+    height: 100%;
+}
+.logo-img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover;
 }
 /* barra de navegação*/
 header > .interface{
@@ -38,4 +50,47 @@ header nav ul li {
     display: inline-block;
     padding: 0 20px;
     color: white;
+}
+
+.menu-icon {
+    color: white;
+    display: none;
+}
+
+.menu-mobile {
+    position: fixed;
+    height: calc(100vh - 154px);
+    top: 154px;
+    right: 0;
+    backdrop-filter: blur(5px);
+    transition: all .6s;
+    transform: translateX(-100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 70px;
+    width: 100%;
+}
+
+.menu-mobile a {
+    text-decoration: none;
+    color: white;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .menu-desktop {
+        display: none;
+    }
+    .btn-contato {
+        display: none;
+    }
+    .menu-mobile.active {
+        transform: translateX(0);
+    }
 }
