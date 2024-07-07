@@ -1,96 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 *{
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-body{
-    background-image: linear-gradient(rgb(44, 9, 241), blue, rgb(48, 31, 202));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: scroll;
-}
-header{
-    padding: 0px 4%;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
 }
 
+:root{
+    --bg-color: #000000;
+    --second-bg-color: #000000;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
 
 .logo{
-    max-width: 200px;
-    height: 100%;
-}
-.logo-img {
-    width: 150px; 
-    height: 150px; 
-    object-fit: cover;
-}
-/* barra de navegação*/
-header > .interface{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
 }
 
-a{
-    text-decoration: none;
+.nav-bar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
 }
-header a{
-    color: #ffff;
+
+.nav-bar a:hover,
+.nav-bar a.active{
+    color: var(--main-color);
 }
-header a:hover{
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
     cursor: pointer;
-    text-decoration: #ffff ;
-    transition: 0.9s;
-}
-ul{
-    list-style: none;
-}
-header nav ul li {
-    display: inline-block;
-    padding: 0 20px;
-    color: white;
-}
-
-.menu-icon {
-    color: white;
     display: none;
-}
-
-.menu-mobile {
-    position: fixed;
-    height: calc(100vh - 154px);
-    top: 154px;
-    right: 0;
-    backdrop-filter: blur(5px);
-    transition: all .6s;
-    transform: translateX(-100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 40px;
-    padding: 0 70px;
-    width: 100%;
-}
-
-.menu-mobile a {
-    text-decoration: none;
-    color: white;
-    padding: 30px;
-}
-
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-    .menu-desktop {
-        display: none;
-    }
-    .btn-contato {
-        display: none;
-    }
-    .menu-mobile.active {
-        transform: translateX(0);
-    }
 }
