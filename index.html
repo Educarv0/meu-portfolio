@@ -1,90 +1,49 @@
-
-
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://kit.fontawesome.com/4bb4dfed16.js" crossorigin="anonymous"></script>
-    <!-- FIM -->
-    <title>Meu Portfólio</title>
-</head>
-
-<body>
     
-    <!---BARRA DE NAVEGAÇÃO-->
-    <header>    
-        <div class="interface">
-            <div class="logo">
-                <a href="">
-                    <img src="imagens/logo haikyuu.png" class="logo-img">
-                </a>
-                
-            </div>
-                
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href=#>Inicio</a></li>
-                    <li><a href=#>Sobre</a></li>
-                    <li><a href=#>Qualidades</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-        <div class="btn-contato">
-                <a href="#">
-                    <button>Contato</button>
-                </a>
-        </div>
-        <div class="menu-icon" onclick="openMenu()">
-            <i class="fa-solid fa-bars hamburger"></i>
-        </div>
-        <menu class="menu-mobile">
-            <a href="#" class="active link">home</a>
-            <a href="#" class="link">sobre mim</a>
-            <a href="#" class="link">Trabalhos</a>
-            <a href="#" class="link">contato</a>
-        </menu>
-    </header>
-    <main>
-        <section class="Topo-do-site">
-            <div class="interace">
-                <div class="flex">
-                </div>
-            </div>
-        </section>
-        <!----INICIO/BANNER--->
-        <!---SOBRE MIM-->
-        <section class="menu">
-            <div class="flex">
-                <div class="sobre-box ">
-                    <img src="#" alt="">
-                    <h2>SOBRE MIM</h2>
-                    <p>Sou estudante do segundo ano do curso Tec. em Informática pelo IFMA - Campus Açailândia</p>
-                </div>
-        <!----QUALIDADE---->
-                <div class=" ">
-                    <h3></h3>
-                    <p></p>
-                </div>
-        <!----PROJETOS---->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Portfolio</title>
 
-                <div class="">
-                    <h3></h3>
-                    <p></p>
-                </div>
-            </div>
-            </div>
-        </section>
-    </main>
-    <script src="index.js"></script>
-</body>
 
-</html>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Eduardo</a>
         
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="nav-bar">
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="#sobremim">Sobre mim</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    
+    
+    </header>
+    <!---- home section design -->
+
+    <section class="inicio" id="inicio">
+        <div class="inicio-content">
+            <h1>Olá, me chamo <span>Antonio Eduardo</span></h1>
+            <div class="text-animado">
+                <h3>Estudante de informática do IFMA- Campus Açailândia</h3>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="menu.js"></script>
+</body>
+</html>
