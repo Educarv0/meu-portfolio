@@ -1,121 +1,300 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+@font-face {
+    font-family: 'Haikyuu';
+    src: url("fonts/dimitri.TTF");
+}
+
+@font-face {
+    font-family: 'Haikyuu2';
+    src: url("fonts/dimitri2.TTF");
+}
+
+/* Reset */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
     scroll-behavior: smooth;
-    font-family: sans-serif;
+    font-family: "Roboto Condensed";
 }
 
-:root{
-    --bg-color: #000000;
-    --second-bg-color: #000000;
-    --text-color: #ededed;
-    --main-color: #00abf0;
+ul {
+    list-style: none;
 }
 
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
+a {
+    text-decoration: none;
 }
 
-body{
-    background: var(--bg-color);
-    color: var(--text-color);
-}
+/* Navbar */
 
-.header{
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
-    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    padding: 5px 20px 5px 20px;
+    transition: all .3s;
+    background-color: transparent;
 }
 
-.logo{
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-}
-
-.nav-bar a{
-    font-size: 1.7rem;
-    color: var(--text-color);
-    font-weight: 500;
-    margin-left: 3.5rem;
-}
-
-.nav-bar a:hover,
-.nav-bar a.active{
-    color: var(--main-color);
-}
-
-#menu-icon {
-    font-size: 3.6rem;
-    color: var(--text-color);
+.logo {
+    max-width: 85px;
     cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style-type: none;
+    transition: all .2s ease;
+    border-radius: 3.5px;
+}
+
+.links {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    position: relative;
+    transition: all .215s ease;
+}
+
+.links:hover {
+    color: #ff751f;
+}
+
+.links::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff751f;
+    transform-origin: bottom left;
+    transition: transform 0.215s ease-out;
+  }
+  
+.links:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.menu-icon i{
+    color: white;
+    font-size: 25px;
     display: none;
 }
 
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-icon i {
+        display: block;
+    }
 }
 
-.inicio{
+/* Banner */
+
+.section {
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 9%;
-}
-
-.inicio-content {
-    max-width: 60rem;
-}
-.inicio-content h1 {
-    font-size: 5.6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-.inicio-content .text-animado{
-    position: relative;
-    width: 32.8rem;
-}
-
-.inicio-content .text-animado h3{
-   font-size: 3.2rem;
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: .7px var(--main-color);
-}
-
-.btn-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 34.5rem;
-    height: 5rem;
-}
-
-.btn-box .btn{
-    position: relative;
-    display: inline-flex;
     justify-content: center;
-    align-items: baseline;
-    width: 15rem;
+}
+
+.banner {
+    background-color: rgb(16, 16, 16);
+}
+
+#inicio .container {
+    width: 100%
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 99px;
     height: 100%;
-    background: var(--main-color);
-    border: .2rem solid var(--main-color);
-    border-radius: .8rem;
-    font-size: 1.8rem;
-    font-weight: 600;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.banner-title {
+    text-align: end;
+}
+
+h4 {
+    font-family: 'Haikyuu2';
+    font-weight: 300;
+    font-size: clamp(1.5rem, 1.8vw, 3rem);
+    color: rgb(247, 247, 247);
+}
+
+.title {
+    font-family: 'Haikyuu';
+    color: rgb(252, 125, 13);
+    font-size: clamp(3.5rem, 4.75vw, 5.5rem);
+}
+
+.banner-title h3 {
+    font-family: 'Haikyuu2';
+    font-size: clamp(1.5rem, 1.8vw, 3rem);
+    color: rgb(252, 125, 13);
+    text-align: start;
+}
+
+.banner-img {
+    max-width: 440px;
+    mask-image: linear-gradient(to top, transparent, rgb(16, 16, 16));
+}
+
+.banner-img img {
+    width: 100%;
+}
+
+.contacts-container {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.contact {
+    color:rgb(247, 247, 247);
+    font-size: clamp(1.9rem, 2.4vw, 4rem);
+    transition: all .215s ease;
+}
+
+.contact:hover {
+    color:rgb(252, 125, 13)
+}
+
+@media (max-width: 1240px) {
+    .container {
+        margin-bottom: 45px;
+    }
+}
+
+/* Sobre mim */
+
+#sobremim {
+    background-color: rgba(9, 9, 9, 0.75);
+    background-image: url("images/abtme.png");
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: darken;
+}
+
+#sobremim .container {
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px
+}
+
+p {
+    color: white;
+    font-size: clamp(1.1rem, 1.2vw, 2rem);
+}
+
+.aboutme-title {
+    text-align: center;
+    max-width: 600px;
+}
+
+.aboutme-title p {
+    text-align: justify;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+
+.box {
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 250px;
+    height: 250px;
+    border: 2px solid white;
+    padding: 20px;
+    transition: all .2s;
+}
+
+.box h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.box:hover {
+    transform: scale(1.03);
+}
+
+/* Habilidades */
+
+#skills {
+    background-color: rgb(8, 8, 8);
+}
+
+#skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skills-title h1 {
+    font-size: clamp(3rem, 4vw, 10rem);
+}
+
+.skill {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgba(252, 125, 13, 0.3);
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.skill:hover {
+    transform: scale(1.04);
+}
+
+.lvl {
+    color:white;
 }
