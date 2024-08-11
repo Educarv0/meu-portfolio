@@ -262,10 +262,10 @@ p {
 /* Habilidades */
 
 #skills {
-    background-color: rgb(8, 8, 8);
+    background-color: rgb(8.5, 8.5, 8.5);
 }
 
-#skills-container {
+.skills-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -297,4 +297,67 @@ p {
 
 .lvl {
     color:white;
+}
+
+/* Projetos */
+
+.projects {
+    background-color: rgb(14, 14, 14);
+}
+
+.projeto {
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 270px;
+    height: 310px;
+    transition: all .2s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid white;
+    color:white;
+}
+
+.projeto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+}
+
+.projeto:hover::before {
+    opacity: 1;
+}
+
+.projeto:hover {
+    transform: scale(1.04);
+}
+
+.project-link {
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#projeto1::before {
+    background-image: url("images/test.webp");
+}
+
+#projeto2::before {
+    background-image: url("https://d.newsweek.com/en/full/2168730/planets-solar-system.jpg?w=1600&h=900&q=88&f=db2ef0373749b0a803d368da04901dab");
 }
