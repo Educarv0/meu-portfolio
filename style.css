@@ -361,3 +361,29 @@ p {
 #projeto2::before {
     background-image: url("https://d.newsweek.com/en/full/2168730/planets-solar-system.jpg?w=1600&h=900&q=88&f=db2ef0373749b0a803d368da04901dab");
 }
+
+/* Rodapé */
+
+.rodape {
+    background: rgb(4, 4, 4);
+    color: white;
+}
+
+.rodape-container {
+    display: flex;
+    flex-direction: column;
+    gap:45px;
+    padding: 65px;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    gap: 25px;
+}
+
+.rodape-links {
+    text-decoration: none;
+    color: white;
+}
