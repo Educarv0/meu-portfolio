@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato · Antonio Eduardo</title>
+    <link rel="icon" href="imagens/logo.png">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Contato</title>
 </head>
 <body>
-    
+    <div class="contact">
+        <h1>contate-me*</h1>
+        <form action="https://formsubmit.co/sergeantguy321@gmail.com" method="POST">
+            <input type="text" name="Nome" placeholder="Nome completo" class="contact-input" required>
+            <input type="email" name="Email" placeholder="Email" class="contact-input" required>
+            <input type="text" name="Telefone" placeholder="Telefone" class="contact-input" required>
+            <textarea name="message" placeholder="Mensagem" class="contact-input"></textarea required>
+            
+            <button type="submit" class="btn">Enviar</button>
+
+            <input type="hidden" name="_subject" value="Novo Contato!">
+            <input type="text" name="_honey" style="display:none;">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_cc" value="carvalhoalves@acad.ifma.edu.br, prof.carlos.costa@acad.ifma.edu.br">
+        </form>
+    </div>
 </body>
 </html>
